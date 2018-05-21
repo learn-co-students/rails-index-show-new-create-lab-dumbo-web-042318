@@ -1,8 +1,11 @@
 <h2>Coupon Form:</h2>
 <%= form_tag coupons_path do %>
-    <label for="coupon_code">Coupon Code:</label>
-    <input type="text" name="coupon[coupon_code]" id="coupon_code"><br>
+    <!-- <label for="coupon_code">Coupon Code:</label> -->
+    <%= label_tag 'coupons:' %>
+    <!--<input type="text" name="coupon[coupon_code]" id="coupon_code"><br> -->
+    <%= text_field_tag :coupon, nil, name: 'coupon[coupon_code]' %>
     <label for="store">Store:</label>
     <input type="text" name="coupon[store]" id="store">
-    <input type="submit" value="Submit Coupon">
+    <!-- <input type="submit" value="Submit Coupon"> -->
+    <%= submit_tag 'Submit Coupon' %>
 <% end %>
